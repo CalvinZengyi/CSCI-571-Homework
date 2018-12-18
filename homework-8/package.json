@@ -1,0 +1,28 @@
+{
+  "name": "homework8-calvinzengyi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yizeng",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/animations": "^7.0.0",
+    "@angular/cdk": "^7.0.1",
+    "@angular/material": "^7.0.1",
+    "angular": "^1.7.0",
+    "angular-animate": "^1.7.0",
+    "angular-aria": "^1.7.0",
+    "angular-material": "^1.1.10",
+    "angular-messages": "^1.7.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "ngeohash": "^0.6.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "spotify-web-api-node": "^4.0.0",
+    "svg-assets-cache": "^1.1.3"
+  }
+}

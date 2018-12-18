@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/a1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/artist1_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="TextView"
+                        android:textSize="30sp" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow>
+
+                            <TextView
+                                android:padding="3dip"
+                                android:text="Name"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/a1_name"
+                                android:layout_marginLeft="15sp"
+                                android:gravity="left"
+                                android:padding="3dip"
+                                android:text="N/A" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:padding="3dip"
+                                android:text="Followers"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/a1_followers"
+                                android:layout_marginLeft="15sp"
+                                android:gravity="left"
+                                android:padding="3dip"
+                                android:text="N/A" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:padding="3dip"
+                                android:text="Popularity"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/a1_popularity"
+                                android:layout_marginLeft="15sp"
+                                android:gravity="left"
+                                android:padding="3dip"
+                                android:text="N/A" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:padding="3dip"
+                                android:text="Check At"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/a1_url"
+                                android:layout_marginLeft="15sp"
+                                android:gravity="left"
+                                android:padding="3dip"
+                                android:text="N/A" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <ImageView
+                        android:id="@+id/a1p1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/a1p2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/a1p3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/a1p4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/a1p5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/a1p6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/a1p7"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/a1p8"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/a2_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/artist2_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="TextView"
+                        android:textSize="30sp" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow>
+
+                            <TextView
+                                android:padding="3dip"
+                                android:text="Name"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/a2_name"
+                                android:layout_marginLeft="15sp"
+                                android:gravity="left"
+                                android:padding="3dip"
+                                android:text="N/A" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:padding="3dip"
+                                android:text="Followers"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/a2_followers"
+                                android:layout_marginLeft="15sp"
+                                android:gravity="left"
+                                android:padding="3dip"
+                                android:text="N/A" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:padding="3dip"
+                                android:text="Popularity"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/a2_popularity"
+                                android:layout_marginLeft="15sp"
+                                android:gravity="left"
+                                android:padding="3dip"
+                                android:text="N/A" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:padding="3dip"
+                                android:text="Check At"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/a2_url"
+                                android:layout_marginLeft="15sp"
+                                android:gravity="left"
+                                android:padding="3dip"
+                                android:text="N/A" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <ImageView
+                        android:id="@+id/a2p1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/a2p2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/a2p3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/a2p4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/a2p5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/a2p6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/a2p7"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/a2p8"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/not_music1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/not_artist1_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="TextView"
+                        android:textSize="30sp" />
+
+                    <ImageView
+                        android:id="@+id/na1p1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/na1p2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/na1p3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/na1p4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/na1p5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/na1p6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/na1p7"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/na1p8"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/not_music2_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/not_artist2_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="TextView"
+                        android:textSize="30sp" />
+
+                    <ImageView
+                        android:id="@+id/na2p1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/na2p2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/na2p3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/na2p4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/na2p5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/na2p6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/na2p7"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                    <ImageView
+                        android:id="@+id/na2p8"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/not_art_img" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

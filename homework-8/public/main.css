@@ -1,0 +1,145 @@
+.container {
+	margin-top: 20px;
+	border-radius: 15px;
+	padding: 20px 0;
+}
+
+#keyword {
+	border-radius: .25em;
+	border: 1px solid #ced4da;
+}
+
+.container:nth-of-type(1) {
+	background-color: #f8f8f8;
+}
+
+md-autocomplete > md-autocomplete-wrap > md-progress-linear {
+	display: none; 
+}
+
+.form-group {
+	padding: 5px 15%;
+}
+.currSelected {
+  background-color: #fada98;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+#display .btn-primary {
+	background-color: white;
+	border-color: white;
+	color: black;
+}
+
+#display .active {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+#display .btn-primary:hover {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.content{
+  text-align: center;
+  transition: width linear 0.2s;
+  overflow:hidden;
+  display:inline-block;
+  margin: auto;
+}
+
+/*.content {
+ -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+    -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+    -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+  line-height:20px;
+  opacity:1;
+  padding:10px;
+  border:1px solid black;
+  background:white;
+  position: absolute;
+  left: 0;
+}
+
+.content.ng-hide {
+  left: -100%;
+  opacity:0;
+  padding:0 10px;
+}*/
+
+.fullWidth{
+  width:100%;
+}
+
+.noWidth{
+  width:0;
+  height: 0;
+}
+.red{
+  background-color: red;
+}
+.blue{
+  background-color: blue;
+}
+
+#fav {
+  padding: 5px;
+}
+
+#events tr:hover {
+  background-color: #ececec;
+}
+
+#events tr i:hover {
+  cursor: pointer;
+}
+
+#favorite i:hover {
+  cursor: pointer;
+}
+
+.tooltip { 
+  pointer-events: none; 
+}
+
+#controllbar {
+  margin-bottom: 50px;
+}
+
+.logEntry.ng-enter 
+{
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity:0;
+  height: 0%;
+}
+.logEntry.ng-enter-active 
+{
+  opacity:1;
+  height: 100%;
+}
+
+
+.logEntry.ng-leave 
+{
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.logEntry.ng-leave-active 
+{
+  opacity:0;
+  height: 0;
+}

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+        <TableRow>
+            <TextView
+                android:text="Artist/Team(s)"
+                android:padding="3dip" />
+
+            <TextView
+                android:id="@+id/event_artists"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="N/A" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Venue"
+                android:padding="3dip" />
+
+            <TextView
+                android:id="@+id/event_venue"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="N/A" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Time"
+                android:padding="3dip" />
+
+            <TextView
+                android:id="@+id/event_time"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="N/A" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Category"
+                android:padding="3dip" />
+
+            <TextView
+                android:id="@+id/event_category"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="N/A" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Price Range"
+                android:padding="3dip" />
+
+            <TextView
+                android:id="@+id/event_pricerange"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="N/A" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Ticket Status"
+                android:padding="3dip" />
+
+            <TextView
+                android:id="@+id/event_ticketstatus"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="N/A" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Buy Ticket At"
+                android:padding="3dip" />
+
+            <TextView
+                android:id="@+id/event_buyticket"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="N/A" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Seat Map"
+                android:padding="3dip" />
+
+            <TextView
+                android:id="@+id/event_seatmap"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="N/A" />
+        </TableRow>
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>

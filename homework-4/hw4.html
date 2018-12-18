@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Top Container Shipping Companies</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body style="text-align: center;">
+		<h3>Enter URL for Container Shipping Companies List JSON File</h3>
+		<input type="text" id="urlInput"> <br>
+		<button id="myBtn" style="margin-top: 20px;">Submit Query</button>
+		<table id="myTable" border="1">
+		</table>
+
+		<script  type="text/javascript">
+			var jsonObj;
+			var jsonDoc;
+
+			function tableCreate(newWindow) {
+				var body = newWindow.document.getElementsByTagName('body')[0];
+			    var tbl = newWindow.document.createElement('table');
+			    tbl.style.width = '100%';
+			    tbl.setAttribute('border', '1');
+			    
+			    //=========create table header==========
+			    var thead = newWindow.document.createElement('thead');
+			    var tr = newWindow.document.createElement('tr');
+			    var headerStr = jsonObj.Mainline.Table.Header.Data;
+			    for (var i = 0; i < headerStr.length; i++) {
+			    	var th = newWindow.document.createElement('th');
+			    	var textnode = newWindow.document.createTextNode(headerStr[i]);
+			    	th.appendChild(textnode);
+			    	tr.appendChild(th);
+			    }
+			    thead.appendChild(tr);
+			    tbl.appendChild(thead);
+
+			    if (jsonObj.Mainline.Table.Row != undefined) {  //Empty data validation
+			    //=========create table body==========
+				    var tbdy = newWindow.document.createElement('tbody');
+				    var info = jsonObj.Mainline.Table.Row;
+				    for (var row = 0; row < info.length; row++) {
+				    	var tr = newWindow.document.createElement('tr');
+				    	
+				    	//Company
+				    	var tdCom = newWindow.document.createElement('td');
+				    	tdCom.appendChild(newWindow.document.createTextNode(info[row].Company));
+				    	tr.appendChild(tdCom);
+				    	
+				    	//Ships
+				    	var tdShips = newWindow.document.createElement('td');
+				    	tdShips.appendChild(newWindow.document.createTextNode(info[row].Ships));
+				    	tr.appendChild(tdShips);
+
+				    	//Hubs
+				    	var tdHubs = newWindow.document.createElement('td');
+				    	var olHubs = newWindow.document.createElement('ul');
+				    	for (var numHubs = 0; numHubs < info[row].Hubs.Hub.length; numHubs++) {
+				    		var li = newWindow.document.createElement('li');
+				    		li.appendChild(newWindow.document.createTextNode(info[row].Hubs.Hub[numHubs]));
+				    		if (numHubs == 0)
+				    			li.style.fontWeight = 'bold';
+				    		olHubs.appendChild(li);
+				    	}
+				    	tdHubs.appendChild(olHubs);
+				    	tr.appendChild(tdHubs);
+
+				    	//Market
+				    	var tdMarket = newWindow.document.createElement('td');
+				    	tdMarket.appendChild(newWindow.document.createTextNode(info[row].Market));
+				    	tr.appendChild(tdMarket);
+
+				    	//HomePage
+				    	var tdHome = newWindow.document.createElement('td');
+				    	var linkHome = newWindow.document.createElement('a');
+				    	linkHome.setAttribute('href', info[row].HomePage);
+				    	linkHome.setAttribute('target', '_blank');
+				    	linkHome.appendChild(newWindow.document.createTextNode(info[row].HomePage));
+				    	tdHome.appendChild(linkHome);
+				    	tr.appendChild(tdHome);
+
+				    	//Logo
+				    	var tdLogo = newWindow.document.createElement('td');
+				    	var imgLogo = newWindow.document.createElement('img');
+				    	imgLogo.setAttribute('src', info[row].Logo);
+				    	imgLogo.style.width = '400px';
+				    	tdLogo.appendChild(imgLogo);
+				    	tr.appendChild(tdLogo);
+
+				    	tbdy.appendChild(tr);
+				    }
+				    tbl.appendChild(tbdy);
+				} else {
+					newWindow.alert("No data!");
+				}
+
+			    body.appendChild(tbl);
+			}
+
+		document.getElementById("myBtn").addEventListener("click", function() {
+			var url = document.getElementById("urlInput").value;
+
+			var xmlhttp=new XMLHttpRequest();
+			xmlhttp.overrideMimeType("application/json");
+			xmlhttp.open("GET",url,false); //open, send, responseText are
+			xmlhttp.send(null); //properties of XMLHTTPRequest
+			
+			//"File doesn't exist" error handler
+			if (xmlhttp.status === 404) {
+				alert("File does not exist.");
+				return;
+			}
+			jsonDoc = xmlhttp.responseText;
+
+			try {
+				jsonObj = JSON.parse(jsonDoc);
+			} catch(e) {
+				alert("Invalid JSON file");
+				return;
+			}
+			
+
+			if (Object.keys(jsonObj).length === 0 && jsonObj.constructor === Object) {
+				alert("Empty File");
+				return;
+			}
+
+			if (jsonObj.Mainline.Table.Row == undefined || jsonObj.Mainline.Table.Row.length == 0) {
+				alert("No data!");
+				return;
+			}
+
+			var myWindow=window.open("", "_blank", 'width = 1400, height = 1500');
+			myWindow.document.write("<!DOCTYPE html><html><header><title>" + document.title + "</title><meta charset=\"utf-8\"/></header><body><div id='table'></div></body></html>");
+			tableCreate(myWindow);
+
+			myWindow.document.close();
+		}); 
+		</script>
+	</body>
+</html>

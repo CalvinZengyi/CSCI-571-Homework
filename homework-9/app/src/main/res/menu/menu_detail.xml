@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.zengyicalvin.homework9.DetailActivity">
+    <item
+        android:id="@+id/favMenueIcon"
+        android:title=""
+        app:showAsAction="always"
+        android:icon="@drawable/heart_fill_white"
+        android:tag="heart_fill_white"/>
+    <item
+        android:id="@+id/mybutton"
+        android:title=""
+        app:showAsAction="always"
+        android:icon="@drawable/twitter_ic"
+        />
+</menu>
